@@ -3,4 +3,13 @@
 @import "bootstrap";
 @import "bootstrap-icons";
 
+/* src/styles.css */
+section {
+  min-height: 80vh; /* Reduzir a altura mínima das seções */
+  padding: 2rem 0; /* Adicionar padding para espaçamento interno */
+}
 
+.container {
+  max-width: 1200px; /* Limitar a largura máxima do container */
+  margin: 0 auto; /* Centralizar o container */
+}
