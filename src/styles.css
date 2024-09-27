@@ -5,7 +5,7 @@
 
 /* src/styles.css */
 section {
-  min-height: 80vh; /* Reduzir a altura mínima das seções */
+  min-height: 100vh; /* Reduzir a altura mínima das seções */
   padding: 2rem 0; /* Adicionar padding para espaçamento interno */
 }
 
