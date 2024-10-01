@@ -1,15 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "bootstrap";
 @import "bootstrap-icons";
 
-/* src/styles.css */
-section {
-  min-height: 100vh; /* Reduzir a altura mínima das seções */
-  padding: 2rem 0; /* Adicionar padding para espaçamento interno */
+$cor-principal: #fa6a6a;
+$cor-secundaria: rgba(194, 43, 43, 0.59);
+
+$cor-background-1: #312d35;
+$cor-background-2: #242527;
+
+.app-texto-principal {
+  color: $cor-principal;
 }
 
-.container {
-  max-width: 1200px; /* Limitar a largura máxima do container */
-  margin: 0 auto; /* Centralizar o container */
+.app-background-principal {
+  background-color: $cor-principal;
+}
+
+.app-hover-secundario {
+  &:hover {
+    background-color: $cor-secundaria;
+  }
+}
+
+.app-background-secundario {
+  background-color: $cor-secundaria;
+}
+
+.app-background-escuro {
+  background-color: $cor-background-1;
+}
+
+.app-background-escuro-2 {
+  background-color: $cor-background-2;
+}
+
+#portfolio {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+section {
+  min-height: 100vh; // vh = view-height
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }

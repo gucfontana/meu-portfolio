@@ -1,0 +1,36 @@
+<section id="portfolio" class="app-background-escuro d-flex justify-content-center align-items-center">
+  <div class="container">
+    <h2 class="display-5 fw-bold text-center">Portfólio</h2>
+
+    <div class="row flex-wrap justify-content-center g-3 mt-5">
+      <div class="col-md-8 col-lg-4">
+        <div id="carouselPortfolio" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              *ngFor="let item of itensPorfolio; index as i"
+              type="button"
+              data-bs-target="#carouselPortfolio"
+              [attr.data-bs-slide-to]="i"
+              class="active"
+              aria-current="true"
+              [attr.aria-label]="'Slide ' + i"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div *ngFor="let item of itensPorfolio; index as i" [ngClass]="{ active: i == 0 }" class="carousel-item">
+              <img class="img-fluid rounded-4 w-100" [src]="item.imgUrl" [alt]="item.descricao" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

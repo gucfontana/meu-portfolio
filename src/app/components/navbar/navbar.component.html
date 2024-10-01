@@ -1,0 +1,25 @@
+<nav class="navbar sticky-top navbar-expand-lg app-background-escuro-2">
+  <div class="container py-2">
+    <a class="navbar-brand fw-semibold" href="#">Gustavo</a>
+    <button
+      (click)="colapsarNavbar = !colapsarNavbar"
+      class="navbar-toggler"
+      type="button"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{ show: colapsarNavbar }">
+      <div class="navbar-nav ms-auto">
+        <a
+          *ngFor="let link of linksNavbar"
+          class="nav-link active"
+          aria-current="page"
+          [href]="link.href"
+        >{{ link.texto }}</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>
