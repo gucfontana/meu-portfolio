@@ -9,11 +9,18 @@ import { NgClass, NgForOf } from "@angular/common";
   templateUrl: "./portfolio.component.html",
 })
 export class PortfolioComponent {
-  public itensPorfolio: ItemPortfolio[] = [
+  public itensPortfolio: ItemPortfolio[] = [
     {
-      href: "#",
-      imgUrl: "/",
-      descricao: "N/D",
+      href: "https://gucfontana.github.io/note-keeper/dashboard",
+      imgUrl: "assets/foto-notekeeper.png",
+      descricao: "NoteKeeper",
+      detalhes: "Aplicativo para gerenciar notas de forma eficiente.",
+    },
+    {
+      href: "https://gucfontana.github.io/gerenciador-tmdb/filmes",
+      imgUrl: "assets/foto-tmdb.png",
+      descricao: "TMDB",
+      detalhes: "Gerenciador de filmes utilizando a API do TMDB.",
     },
   ];
 }
