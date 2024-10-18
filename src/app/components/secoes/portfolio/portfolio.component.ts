@@ -22,5 +22,11 @@ export class PortfolioComponent {
       descricao: "TMDB",
       detalhes: "Gerenciador de filmes utilizando a API do TMDB.",
     },
+    {
+      href: "https://pokedex-angular-sepia.vercel.app/listagem",
+      imgUrl: "assets/foto-pokedex.png",
+      descricao: "Pokedex",
+      detalhes: "Gerencia de pokemons utilizando a API do Pokemon.",
+    },
   ];
 }
