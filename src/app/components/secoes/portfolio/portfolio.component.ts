@@ -26,7 +26,13 @@ export class PortfolioComponent {
       href: "https://pokedex-angular-sepia.vercel.app/listagem",
       imgUrl: "assets/foto-pokedex.png",
       descricao: "Pokedex",
-      detalhes: "Gerencia de pokemons utilizando a API do Pokemon.",
+      detalhes: "Gerenciador de pokemons utilizando a API do Pokemon.",
+    },
+    {
+      href: "https://github.com/gucfontana/e-agenda",
+      imgUrl: "assets/foto-eagenda.png",
+      descricao: "e-Agenda",
+      detalhes: "Gerenciador de contatos, compromissos e tarefas.",
     },
   ];
 }
