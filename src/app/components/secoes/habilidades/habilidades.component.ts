@@ -1,45 +1,63 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { ItemHabilidades } from "./models/item-habilidades";
-import { NgForOf } from "@angular/common";
 
 @Component({
   selector: "app-habilidades",
   standalone: true,
-  imports: [NgForOf],
+  imports: [CommonModule],
   templateUrl: "./habilidades.component.html",
-  styleUrl: "./habilidades.component.scss",
+  styleUrls: ['./habilidades.component.scss']
 })
-export class HabilidadesComponent {
+export class HabilidadesComponent implements OnInit {
   public itensHabilidades: ItemHabilidades[] = [
     {
-      icone: "bi-window-fullscreen",
-      titulo: "Web Design",
-      descricao: `Design e desenvolvimento de sistemas web atraentes e responsivos.`,
+      icone: "bi-code-slash",
+      titulo: "Desenvolvimento Frontend",
+      descricao: "Experiência em criar interfaces modernas e responsivas com Angular",
+      nivel: 55
     },
     {
       icone: "bi-server",
-      titulo: "Aplicações Back-End",
-      descricao: `Desenvolvimento de sistemas robustos para solucionar problemas simples ou complexos.`,
-    },
-    {
-      icone: "bi-graph-up",
-      titulo: "Testes Automatizados",
-      descricao: `Criação de testes automatizados que facilitam a manutenção e melhoram as entregas das aplicações.`,
-    },
-    {
-      icone: "bi-wrench",
-      titulo: "Engenharia de Software",
-      descricao: `Planejamento e execução de sistemas multi-camadas, integrando várias tecnologias de forma organizada e escalável.`,
-    },
-    {
-      icone: "bi-people",
-      titulo: "Liderança",
-      descricao: `Habilidade de liderar e tomar decisões técnicas em projetos em equipe.`,
-    },
-    {
-      icone: "bi-building-up",
-      titulo: "Implantação",
-      descricao: `Implantação e manutenção de sistemas em servidores VPS e em nuvem.`,
+      titulo: "Desenvolvimento Backend",
+      descricao: "Experiência em desenvolvimento com ASP.NET MVC, APIs RESTful e integração com bancos de dados",
+      nivel: 85
     },
   ];
+
+  ngOnInit(): void {
+    this.setupScrollAnimation();
+  }
+
+  private setupScrollAnimation(): void {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    setTimeout(() => {
+      document.querySelectorAll('.skill-item').forEach(card => {
+        observer.observe(card);
+      });
+    }, 0);
+  }
+
+  // Método opcional para categorizar habilidades
+  getCategorizedSkills() {
+    return {
+      technical: this.itensHabilidades.filter(skill => skill.categoria === 'technical'),
+      soft: this.itensHabilidades.filter(skill => skill.categoria === 'soft'),
+      tools: this.itensHabilidades.filter(skill => skill.categoria === 'tools')
+    };
+  }
 }

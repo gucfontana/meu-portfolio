@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { ItemPortfolio } from "./models/item-portfolio";
 import { NgClass, NgForOf } from "@angular/common";
+import { ItemPortfolio } from "./models/item-portfolio";
 
 @Component({
   selector: "app-portfolio",
@@ -9,7 +9,7 @@ import { NgClass, NgForOf } from "@angular/common";
   templateUrl: "./portfolio.component.html",
 })
 export class PortfolioComponent {
-  public itensPortfolio: ItemPortfolio[] = [
+  readonly itensPortfolio: ItemPortfolio[] = [
     {
       href: "https://gucfontana.github.io/note-keeper/dashboard",
       imgUrl: "assets/foto-notekeeper.png",

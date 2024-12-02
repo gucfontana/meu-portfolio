@@ -1,23 +1,28 @@
-<section
-  id="habilidades"
-  class="app-background-escuro d-flex justify-content-center align-items-center"
->
-  <div class="container">
-    <h2 class="display-5 fw-bold text-center">Minhas habilidades</h2>
+<section id="habilidades" class="app-background-escuro">
+  <div class="container py-5">
+    <h2 class="display-5 fw-bold text-center mb-5">
+      <span class="position-relative">
+        Minhas Habilidades
+        <span class="section-decorator"></span>
+      </span>
+    </h2>
 
-    <div class="row row-cols-1 row-cols-lg-2 g-3 mt-5">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
       <div
-        *ngFor="let item of itensHabilidades"
-        class="d-flex align-items-center gap-4"
+        *ngFor="let item of itensHabilidades; let i = index"
+        class="skill-item"
+        [attr.data-aos]="'fade-up'"
+        [attr.data-aos-delay]="i * 100"
       >
-        <span>
-          <i class="bi {{ item.icone }} fs-1"></i>
-        </span>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="bi {{ item.icone }}"></i>
+          </div>
 
-        <div class="d-flex flex-column">
-          <label class="fs-4 fw-semibold">{{ item.titulo }}</label>
-
-          <small class="fs-5">{{ item.descricao }}</small>
+          <div class="skill-content">
+            <h3 class="skill-title">{{ item.titulo }}</h3>
+            <p class="skill-description">{{ item.descricao }}</p>
+          </div>
         </div>
       </div>
     </div>

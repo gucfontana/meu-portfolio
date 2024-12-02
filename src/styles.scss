@@ -1,11 +1,20 @@
 @import "bootstrap";
 @import "bootstrap-icons";
 
-$cor-principal: #fa6a6a;
-$cor-secundaria: rgba(194, 43, 43, 0.59);
+// Nova paleta de cores com tons de azul
+$cor-principal: #007bff;      // Azul principal mais vibrante
+$cor-secundaria: #191970;     // Midnight Blue
+$cor-background-1: #1a1b2e;   // Azul escuro para background
+$cor-background-2: #151629;   // Azul mais escuro para background
 
-$cor-background-1: #312d35;
-$cor-background-2: #242527;
+// Variáveis CSS para uso global
+:root {
+  --accent-color: #{$cor-principal};
+  --accent-color-dark: darken($cor-principal, 15%);
+  --secondary-color: #{$cor-secundaria};
+  --background-dark: #{$cor-background-1};
+  --background-darker: #{$cor-background-2};
+}
 
 .app-texto-principal {
   color: $cor-principal;
@@ -13,34 +22,28 @@ $cor-background-2: #242527;
 
 .app-background-principal {
   background-color: $cor-principal;
+  transition: background-color 0.3s ease;
 }
 
 .app-hover-secundario {
+  transition: background-color 0.3s ease;
+
   &:hover {
-    background-color: $cor-secundaria;
+    background-color: rgba($cor-secundaria, 0.8);
   }
 }
 
 .app-background-secundario {
   background-color: $cor-secundaria;
+  transition: background-color 0.3s ease;
 }
 
 .app-background-escuro {
   background-color: $cor-background-1;
+  transition: background-color 0.3s ease;
 }
 
 .app-background-escuro-2 {
   background-color: $cor-background-2;
-}
-
-#portfolio {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-section {
-  min-height: 100vh; // vh = view-height
-
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  transition: background-color 0.3s ease;
 }

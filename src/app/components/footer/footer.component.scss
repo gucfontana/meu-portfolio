@@ -1,0 +1,12 @@
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  a {
+    color: inherit;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

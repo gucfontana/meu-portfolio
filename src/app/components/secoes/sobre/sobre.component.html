@@ -1,84 +1,130 @@
-<section id="sobre" class="app-background-escuro-2 d-flex justify-content-center align-items-center">
-  <div class="container">
-    <div class="d-flex justify-content-center">
-      <img class="img-fluid rounded-pill" src="assets/foto-gustavo.png" alt="Minha foto" style="max-width: 200px"/>
+<section id="sobre" class="app-background-escuro-2">
+  <div class="container" style="padding-top: 60px;">
+    <div class="profile-photo-container">
+      <div class="profile-photo-wrapper">
+        <img
+          src="assets/foto-gustavo.jpg"
+          alt="Minha foto"
+          class="profile-photo"
+        />
+      </div>
     </div>
 
-    <h2 class="display-5 fw-bold text-center mt-5">Um pouco sobre mim</h2>
+      <h2 class="display-5 fw-bold text-center mt-4">
+        <span class="position-relative">
+          Um pouco sobre mim
+          <span class="section-decorator"></span>
+        </span>
+      </h2>
 
-    <div class="row flex-wrap mt-5">
-      <div class="col-lg-7 col-xxl-8">
-        <h3 class="fs-3">
-          Meu nome é <span class="app-texto-principal">Gustavo,</span> sou um desenvolvedor Full-Stack
-        </h3>
+      <div class="row g-4 mt-4">
+        <div class="col-lg-7 col-xxl-8">
+          <div class="about-content">
+            <h3 class="intro-text">
+              Meu nome é <span class="highlight">Gustavo, </span>
+              <span class="typing-text">sou um desenvolvedor Full-Stack</span>
+            </h3>
 
-        <p class="fs-5 mt-3">
-          Tenho 6 meses de experiência como desenvolvedor trainee Full-Stack. Desenvolvi alguns projetos com diferentes
-          regras de negócio, utilizando a
-          <span class="app-texto-principal fw-semibold">Plataforma .NET </span>e
-          <span class="app-texto-principal fw-semibold">Angular</span>.
-        </p>
+            <div class="about-description">
+              <p>
+                Tenho 6 meses de experiência como desenvolvedor trainee Full-Stack.
+                Desenvolvi diversos projetos com diferentes regras de negócio, utilizando a
+                <span class="highlight">Plataforma .NET</span> e
+                <span class="highlight">Angular</span>.
+              </p>
 
-        <p class="fs-5">
-          Hoje sou aluno na
-          <span class="app-texto-principal fw-semibold">Academia do Programador</span>, uma escola focada no ensino e
-          direcionamento de desenvolvedores para o mercado de trabalho.
-        </p>
-      </div>
+              <p>
+                Atualmente sou aluno na
+                <span class="highlight">Academia do Programador</span>,
+                uma escola focada no ensino e direcionamento de desenvolvedores
+                para o mercado de trabalho.
+              </p>
+            </div>
+          </div>
+        </div>
 
-      <div class="col">
-        <ul class="list-group">
-          <li class="list-group-item py-3 app-background-principal"><strong>Nome:</strong> Gustavo da Costa Fontana</li>
-          <li class="list-group-item py-3 app-background-secundario">
-            <strong>Email: </strong>
-            <a href="mailto:gucfontana@gmail.com">gucfontana&#64;gmail.com</a>
-          </li>
-          <li class="list-group-item py-3 app-background-principal"><strong>Idade:</strong> 26 anos</li>
-          <li class="list-group-item py-3 app-background-secundario"><strong>De:</strong> Lages, Santa Catarina</li>
-        </ul>
+        <div class="col-lg-5 col-xxl-4">
+          <div class="info-card">
+            <ul class="info-list">
+              <li class="info-item">
+                <i class="bi bi-person"></i>
+                <div>
+                  <span class="label">Nome</span>
+                  <span class="value">Gustavo da Costa Fontana</span>
+                </div>
+              </li>
 
-        <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
-          <a
-            rel="noopener"
-            target="_blank"
-            href="https://github.com/gucfontana"
-            aria-label="GitHub"
-            class="text-light"
-          >
-            <i class="bi bi-github fs-1"></i>
-          </a>
+              <li class="info-item">
+                <i class="bi bi-envelope"></i>
+                <div>
+                  <span class="label">Email</span>
+                  <a href="mailto:gucfontana@gmail.com" class="value">
+                    gucfontana&#64;gmail.com
+                  </a>
+                </div>
+              </li>
 
-          <a
-            rel="noopener"
-            target="_blank"
-            href="https://api.whatsapp.com/send?phone=5549991776669&text&type=phone_number&app_absent=0"
-            aria-label="WhatsApp"
-            class="text-light"
-          >
-            <i class="bi bi-whatsapp fs-1"></i>
-          </a>
+              <li class="info-item">
+                <i class="bi bi-calendar"></i>
+                <div>
+                  <span class="label">Idade</span>
+                  <span class="value">26 anos</span>
+                </div>
+              </li>
 
-          <a
-            rel="noopener"
-            target="_blank"
-            href="https://instagram.com/gucfontana"
-            aria-label="Instagram"
-            class="text-light"
-          >
-            <i class="bi bi-instagram fs-1"></i>
-          </a>
+              <li class="info-item">
+                <i class="bi bi-geo-alt"></i>
+                <div>
+                  <span class="label">Localização</span>
+                  <span class="value">Lages, Santa Catarina</span>
+                </div>
+              </li>
+            </ul>
 
-          <a
-            rel="noopener"
-            target="_blank"
-            href="https://linkedin.com/in/gucfontana"
-            aria-label="Linkedin"
-            class="text-light"
-          >
-            <i class="bi bi-linkedin fs-1"></i>
-          </a>
+            <div class="social-links">
+              <a href="https://github.com/gucfontana"
+                 target="_blank"
+                 rel="noopener"
+                 aria-label="GitHub">
+                <i class="bi bi-github"></i>
+              </a>
+
+              <a href="https://api.whatsapp.com/send?phone=5549991776669"
+                 target="_blank"
+                 rel="noopener"
+                 aria-label="WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+
+              <a href="https://instagram.com/gucfontana"
+                 target="_blank"
+                 rel="noopener"
+                 aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="https://linkedin.com/in/gucfontana"
+                 target="_blank"
+                 rel="noopener"
+                 aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+
+            <div class="cv-download">
+              <a href="assets/curriculo-gf.pdf"
+                 download="curriculo-gf.pdf"
+                 class="download-button">
+                <i class="bi bi-file-earmark-pdf me-2"></i>
+                Download Curriculo
+                <span class="download-icon">
+      <i class="bi bi-download"></i>
+    </span>
+              </a>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </section>

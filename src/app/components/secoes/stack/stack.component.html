@@ -1,14 +1,29 @@
-<section
-  id="stack"
-  class="app-background-secundario d-flex justify-content-center align-items-center"
->
-  <div class="container">
-    <h2 class="display-5 fw-bold text-center">Stack</h2>
+<section id="stack" class="app-background-secundario">
+  <div class="container py-5">
+    <h2 class="display-5 fw-bold text-center">
+      <span class="position-relative">
+        Stack
+        <span class="section-decorator"></span>
+      </span>
+    </h2>
 
-    <div class="row flex-wrap justify-content-center g-3 mt-5">
-      <div *ngFor="let item of itensStack" class="col-md-6 col-lg-3">
-        <div class="card rounded-5 text-center py-3">
-          <span>{{ item.titulo }}</span>
+    <div class="stack-grid mt-5">
+      <div *ngFor="let item of itensStack; let i = index"
+           class="stack-item"
+           [attr.data-aos]="'fade-up'"
+           [attr.data-aos-delay]="i * 100">
+        <div class="stack-card" [ngStyle]="{'--delay': i * 0.1 + 's'}">
+          <div class="stack-icon">
+            <i [class]="item.icone"></i>
+          </div>
+          <h3 class="stack-title">{{ item.titulo }}</h3>
+          <div class="stack-level" *ngIf="item.nivel">
+            <div class="progress-bar" [style.width.%]="item.nivel"></div>
+            <span class="level-label">{{ item.nivel }}%</span>
+          </div>
+          <div class="stack-details">
+            <span *ngFor="let tech of item.tecnologias">{{ tech }}</span>
+          </div>
         </div>
       </div>
     </div>

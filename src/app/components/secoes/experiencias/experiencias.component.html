@@ -1,26 +1,30 @@
-<section
-  id="experiencias"
-  class="app-background-escuro-2 d-flex justify-content-center align-items-center"
->
-  <div class="container">
-    <h2 class="display-5 fw-bold text-center">Experiências</h2>
+<section id="experiencias" class="app-background-escuro-2">
+  <div class="container py-5">
+    <h2 class="display-5 fw-bold text-center mb-5">
+      <span class="position-relative">
+        Experiências
+        <span class="section-decorator"></span>
+      </span>
+    </h2>
 
-    <div class="row flex-wrap justify-content-center g-3 mt-5">
+    <div class="row g-4 justify-content-center">
       <div *ngFor="let item of experiencias" class="col-lg-4">
-        <div class="app-card app-borda-principal card h-100">
+        <div class="experience-card h-100">
           <div class="card-header">
-            <span class="app-background-principal rounded-pill px-3">{{
-                item.duracaoExperiencia
-              }}</span>
-            <br />
-            <img class="my-3" [src]="item.imgUrl" alt="{{ item.alt }}" />
-            <br />
-            <label class="app-texto-principal fw-semibold">{{
-                item.titulo
-              }}</label>
+            <div class="duration-badge">
+              {{ item.duracaoExperiencia }}
+            </div>
+
+            <div class="company-logo">
+              <img [src]="item.imgUrl" [alt]="item.alt" />
+            </div>
+
+            <h3 class="job-title">
+              {{ item.titulo }}
+            </h3>
           </div>
 
-          <div [innerHTML]="item.descricao" class="card-body fs-6"></div>
+          <div class="card-body" [innerHTML]="item.descricao"></div>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import { SobreComponent } from "./components/secoes/sobre/sobre.component";
 import { HabilidadesComponent } from "./components/secoes/habilidades/habilidades.component";
 import { StackComponent } from "./components/secoes/stack/stack.component";
 import { ExperienciasComponent } from "./components/secoes/experiencias/experiencias.component";
-import { PortfolioComponent } from "./components/secoes/portfolio/portfolio.component";
+import { PortfolioComponent } from './components/secoes/portfolio/portfolio.component';
 
 @Component({
   selector: "app-root",

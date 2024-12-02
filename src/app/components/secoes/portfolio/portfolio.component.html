@@ -4,12 +4,16 @@
 
     <div class="row flex-wrap justify-content-center g-3 mt-5">
       <div class="col-md-8 col-lg-4" *ngFor="let item of itensPortfolio">
-        <div class="card">
-          <img class="img-fluid rounded-4 w-100" [src]="item.imgUrl" [alt]="item.descricao" />
-          <div class="card-body">
-            <h5 class="card-title">{{ item.descricao }}</h5>
-            <p class="card-text">{{ item.detalhes }}</p>
-            <a [href]="item.href" target="_blank" class="btn btn-danger">Ver mais</a>
+        <div class="portfolio-card">
+          <div class="card-image">
+            <img class="img-fluid" [src]="item.imgUrl" [alt]="item.descricao" />
+          </div>
+          <div class="card-content">
+            <h5 class="title">{{ item.descricao }}</h5>
+            <p class="details">{{ item.detalhes }}</p>
+            <a [href]="item.href" target="_blank" class="btn btn-primary">
+            Ver projeto
+          </a>
           </div>
         </div>
       </div>
