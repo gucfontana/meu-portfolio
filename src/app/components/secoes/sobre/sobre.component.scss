@@ -1,6 +1,4 @@
-.profile-section {
-  position: relative;
-}
+.profile-section { position: relative; }
 
 .profile-image-wrapper {
   text-align: center;
@@ -15,17 +13,14 @@
   overflow: hidden;
   border: 4px solid var(--accent-color, #007bff);
   box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
-  animation: fadeIn 1s ease;
+  animation: fadeIn 1s;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.1);
-    }
+    transition: transform .3s;
+    &:hover { transform: scale(1.1); }
   }
 }
 
@@ -40,7 +35,7 @@
 }
 
 .about-content {
-  animation: slideIn 0.8s ease;
+  animation: slideIn .8s;
   --slide-direction: -30px;
 
   .intro-text {
@@ -57,8 +52,7 @@
       display: inline-block;
       border-right: 3px solid var(--accent-color, #007bff);
       white-space: nowrap;
-      animation: typing 3.5s steps(40, end),
-      blink-caret 0.75s step-end infinite;
+      animation: typing 3.5s steps(40), blink .75s step-end infinite;
     }
   }
 }
@@ -68,10 +62,7 @@
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.9);
 
-  p {
-    margin-bottom: 1.5rem;
-  }
-
+  p { margin-bottom: 1.5rem; }
   .highlight {
     color: var(--accent-color, #007bff);
     font-weight: 500;
@@ -82,7 +73,7 @@
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   padding: 2rem;
-  animation: slideIn 0.8s ease;
+  animation: slideIn .8s;
   --slide-direction: 30px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -98,12 +89,9 @@
   align-items: center;
   padding: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform .3s;
 
-  &:last-child {
-    border-bottom: none;
-  }
-
+  &:last-child { border: 0; }
   &:hover {
     background: rgba(255, 255, 255, 0.05);
     transform: translateX(5px);
@@ -121,7 +109,7 @@
   }
 
   .label {
-    font-size: 0.9rem;
+    font-size: .9rem;
     color: rgba(255, 255, 255, 0.6);
   }
 
@@ -129,10 +117,7 @@
     font-size: 1.1rem;
     color: white;
     text-decoration: none;
-
-    &:hover {
-      color: var(--accent-color, #007bff);
-    }
+    &:hover { color: var(--accent-color, #007bff); }
   }
 }
 
@@ -153,17 +138,14 @@
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     color: white;
-    text-decoration: none;
-    transition: transform 0.3s ease;
+    transition: transform .3s;
 
     &:hover {
       background: var(--accent-color, #007bff);
       transform: translateY(-5px);
     }
 
-    i {
-      font-size: 1.5rem;
-    }
+    i { font-size: 1.5rem; }
   }
 }
 
@@ -172,14 +154,14 @@
   to { width: 100% }
 }
 
-@keyframes blink-caret {
+@keyframes blink {
   from, to { border-color: transparent }
   50% { border-color: var(--accent-color, #007bff) }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0 }
+  to { opacity: 1 }
 }
 
 @keyframes slideIn {
@@ -196,7 +178,7 @@
 .cv-download {
   margin-top: 2rem;
   text-align: center;
-  animation: fadeIn 0.8s ease;
+  animation: fadeIn .8s;
 }
 
 .download-button {
@@ -205,15 +187,12 @@
   padding: 1rem 2rem;
   background: var(--accent-color, #007bff);
   color: white;
-  text-decoration: none;
   border-radius: 50px;
   font-weight: 500;
-  transition: transform 0.3s ease;
+  transition: transform .3s;
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 
-  i {
-    font-size: 1.2rem;
-  }
+  i { font-size: 1.2rem; }
 
   .download-icon {
     display: flex;
@@ -225,9 +204,7 @@
     border-radius: 50%;
     margin-left: 1rem;
 
-    i {
-      font-size: 1rem;
-    }
+    i { font-size: 1rem; }
   }
 
   &:hover {
@@ -235,9 +212,7 @@
     background: var(--accent-color-dark, #0056b3);
     color: white;
 
-    .download-icon {
-      background: rgba(255, 255, 255, 0.3);
-    }
+    .download-icon { background: rgba(255, 255, 255, 0.3); }
   }
 }
 
@@ -263,7 +238,7 @@
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--app-background-escuro-2, #1a1a1a);
-  transition: transform 0.3s ease;
+  transition: transform .3s;
 }
 
 @media (max-width: 991.98px) {
@@ -273,15 +248,9 @@
   }
   .intro-text { font-size: 1.75rem !important; }
   .info-card { max-width: 500px; margin: 0 auto; }
-  .profile-photo-wrapper {
-    width: 250px;
-    height: 250px;
-  }
+  .profile-photo-wrapper { width: 250px; height: 250px; }
 }
 
 @media (max-width: 576px) {
-  .profile-photo-wrapper {
-    width: 200px;
-    height: 200px;
-  }
+  .profile-photo-wrapper { width: 200px; height: 200px; }
 }
