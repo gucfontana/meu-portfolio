@@ -34,5 +34,11 @@ export class PortfolioComponent {
       descricao: "e-Agenda",
       detalhes: "Gerenciador de contatos, compromissos e tarefas.",
     },
+    {
+      href: "https://organiza-med-hjhnczembmf6cwe0.canadaeast-01.azurewebsites.net/",
+      imgUrl: "assets/foto-tcc.png",
+      descricao: "OrganizaMed - TCC Academia do Programador",
+      detalhes: "Gerencie e organize o cronograma de atividades médicas em sua clínica.",
+    },
   ];
 }
